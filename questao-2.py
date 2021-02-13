@@ -4,7 +4,7 @@ import cv2 as cv
 import matplotlib.pyplot as plt
 import numpy as np
 
-caminho_video = 'carro.gif'
+caminho_video = 'rsc/carro.gif'
 if len(sys.argv) >= 2:
     caminho_video = sys.argv[1]
 vid = cv.VideoCapture(caminho_video)

@@ -3,7 +3,7 @@ import sys
 import cv2 as cv
 import numpy as np
 
-caminho_imagem = 'starry_night.png'
+caminho_imagem = 'rsc/starry_night.png'
 if len(sys.argv) >= 2:
     caminho_imagem = sys.argv[1]
 img = cv.imread(cv.samples.findFile(caminho_imagem))

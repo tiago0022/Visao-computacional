@@ -2,7 +2,7 @@ import sys
 
 import cv2 as cv
 
-caminho_imagem = 'starry_night.png'
+caminho_imagem = 'rsc/starry_night.png'
 
 if len(sys.argv) >= 2:
     caminho_imagem = sys.argv[1]
