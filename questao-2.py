@@ -65,7 +65,8 @@ print('Diferença L_1 entre contraste e média:', round(distancia_contraste_medi
 print('Diferença L_1 entre contraste e variância:', round(distancia_contraste_variancia, 2))
 print('Diferença L_1 entre média e variância:', round(distancia_media_variancia, 2))
 
-print('\nVermelho: contraste / Amarelo: média / Azul: variância\n')
+print('\nLegenda:')
+print('[Vermelho]: contraste / [Amarelo]: média / [Azul]: variância\n')
 
 plt.plot(lista_contraste, 'r')
 plt.plot(lista_media, 'y')
