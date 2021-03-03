@@ -1,5 +1,5 @@
-# Visão computacional 01
-Visão computacional - exercícios 01
+# Visão computacional
+Visão computacional - exercícios
 
 Para executar qualquer uma das questões:
 
