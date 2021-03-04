@@ -40,7 +40,7 @@ media = np.average(combinacao)
 for i in range(len(combinacao)):
     for j in range(len(combinacao[i])):
         if combinacao[i][j] > media * 1.9:
-            combinacao[i][j] = 255
+            combinacao[i][j] = 1
         else:
             combinacao[i][j] = 0
 
