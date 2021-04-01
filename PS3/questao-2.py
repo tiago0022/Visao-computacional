@@ -53,7 +53,7 @@ for pi in range(len(img)):
             ai = a[0]
             aj = a[1]
 
-            if ai < 0 or ai == len(img) or aj < 0 or aj == len(img[pi]):
+            if ai < 0 or ai >= len(img) or aj < 0 or aj >= len(img[pi]):
                 continue
 
             u_original = img[pi][pj]
@@ -107,14 +107,13 @@ exibe(matriz_coocorrencia_original, 'M. Coocorrência original')
 exibe(lista_matriz_coocorrencia_suavisado[29], 'M. Coocorrência suavisado (30)')
 exibe(lista_matriz_coocorrencia_residuo[29], 'M. Coocorrência resíduo (30)')
 
-indice += 1
-plt.subplot(n_linhas, n_colunas, indice), plt.text(f'Homogeneidade original: {homogeneidade_original}')
+exibe([[0]], f'Homogeneidade original: {round(homogeneidade_original, 2)}')
 indice += 1
 plt.subplot(n_linhas, n_colunas, indice), plt.plot(lista_homogeneidade_suavisada), plt.title('Homogeneidade suavisadas')
 indice += 1
 plt.subplot(n_linhas, n_colunas, indice), plt.plot(lista_homogeneidade_residuo), plt.title('Homogeneidade resíduos')
-indice += 1
-plt.subplot(n_linhas, n_colunas, indice), plt.text(f'Uniformidade original: {uniformidade_original}')
+
+exibe([[0]], f'Uniformidade original: {round(uniformidade_original, 2)}')
 indice += 1
 plt.subplot(n_linhas, n_colunas, indice), plt.plot(lista_uniformidade_suavisada), plt.title('Uniformidade suavisadas')
 indice += 1
