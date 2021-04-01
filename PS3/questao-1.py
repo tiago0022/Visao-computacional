@@ -58,7 +58,7 @@ def evento_mouse(event, x, y, flags, param):
             try:
                 area = round(cv.contourArea(contorno), 2)
                 perimetro = round(cv.arcLength(contorno, True), 2)
-                diametro = np.sqrt(4*area/np.pi)
+                diametro = round(np.sqrt(4*area/np.pi), 2)
             except:
                 area = '<erro objeto muito grande>'
                 perimetro = '<erro objeto muito grande>'

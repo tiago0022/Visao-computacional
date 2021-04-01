@@ -89,11 +89,11 @@ for u in range(256):
         uniformidade_original += (matriz_coocorrencia_original[u][v] ** 2) / soma_T
         for i in range(30):
 
-            lista_homogeneidade_suavisada[i] += (lista_matriz_coocorrencia_suavisado[i][u][v] / (1 + np.abs(u - v))) / soma_T
-            lista_uniformidade_suavisada[i] += (lista_matriz_coocorrencia_suavisado[i][u][v] ** 2) / soma_T
+            lista_homogeneidade_suavisada[i] += (lista_matriz_coocorrencia_suavisado[i][u][v] / (1 + np.abs(u - v)))
+            lista_uniformidade_suavisada[i] += (lista_matriz_coocorrencia_suavisado[i][u][v] ** 2)
 
-            lista_homogeneidade_residuo[i] += (lista_matriz_coocorrencia_residuo[i][u][v] / (1 + np.abs(u - v))) / soma_T
-            lista_uniformidade_residuo[i] += (lista_matriz_coocorrencia_residuo[i][u][v] ** 2) / soma_T
+            lista_homogeneidade_residuo[i] += (lista_matriz_coocorrencia_residuo[i][u][v] / (1 + np.abs(u - v)))
+            lista_uniformidade_residuo[i] += (lista_matriz_coocorrencia_residuo[i][u][v] ** 2)
 
     print('Calculando... ', round(50 + (u/256) * 50, 2), '%')
 

@@ -67,7 +67,7 @@ limiar = 250
 imagem_deteccao = imagem.copy()
 imagem_exibicao = cv.cvtColor(imagem.copy() * 255, cv.COLOR_GRAY2BGR)
 
-lista_linha = cv.HoughLinesP(imagem_deteccao, rho=1, theta=np.pi/180, threshold=limiar, minLineLength=100, maxLineGap=50)
+lista_linha = cv.HoughLinesP(imagem_deteccao, rho=1, theta=np.pi/180, threshold=limiar)
 
 for line in lista_linha:
     for x1, y1, x2, y2 in line:
