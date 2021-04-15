@@ -22,18 +22,6 @@ def exibe(imagem, nome=''):
     plt.title(nome), plt.xticks([]), plt.yticks([])
 
 
-vid = cv.VideoCapture(caminho_video)
-
-_, quadro_1 = vid.read()
-quadro_1 = cv.cvtColor(quadro_1, cv.COLOR_BGR2GRAY)
-
-_, quadro_2 = vid.read()
-quadro_2 = cv.cvtColor(quadro_2, cv.COLOR_BGR2GRAY)
-
-exibe(quadro_1, 'Quadro 1')
-exibe(quadro_2, 'Quadro 2')
-
-
 def calcula_Ix(x, y, I):
 
     t = 0
@@ -163,7 +151,7 @@ def aprox_horn_s(I):
 
 def horn_s(I, inicializacao='0', aproximacao_Ixyt='Horn S.'):
 
-    T = 5
+    T = 7
     lmbd = 0.1
 
     n_rows = len(I[0])
@@ -201,12 +189,6 @@ def horn_s(I, inicializacao='0', aproximacao_Ixyt='Horn S.'):
                 u[x][y] = u_media - (alpha * Ix)
                 v[x][y] = v_media - (alpha * Iy)
 
-        # print(u, '\n------------------------')
-        # print(u_anterior, '\n------------------------')
-        # print(np.subtract(u, u_anterior), '\n------------------------')
-        # print(np.subtract(u, u_anterior).flatten(), '\n------------------------')
-        # print(np.mean(np.subtract(u, u_anterior).flatten()), '\n------------------------')
-
         media_diferenca_u = np.mean(np.abs(np.subtract(u, u_anterior).flatten()))
         media_diferenca_v = np.mean(np.abs(np.subtract(v, v_anterior).flatten()))
 
@@ -216,6 +198,17 @@ def horn_s(I, inicializacao='0', aproximacao_Ixyt='Horn S.'):
 
     return np.uint8(u), np.uint8(v)
 
+
+vid = cv.VideoCapture(caminho_video)
+
+_, quadro_1 = vid.read()
+quadro_1 = cv.cvtColor(quadro_1, cv.COLOR_BGR2GRAY)
+
+_, quadro_2 = vid.read()
+quadro_2 = cv.cvtColor(quadro_2, cv.COLOR_BGR2GRAY)
+
+exibe(quadro_1, 'Quadro 1')
+exibe(quadro_2, 'Quadro 2')
 
 img_seq = np.array([quadro_1, quadro_2])
 
