@@ -192,7 +192,7 @@ def horn_s(I, inicializacao='0', aproximacao_Ixyt='Horn S.'):
         media_diferenca_u = np.mean(np.abs(np.subtract(u, u_anterior).flatten()))
         media_diferenca_v = np.mean(np.abs(np.subtract(v, v_anterior).flatten()))
 
-        print(f'--> iteração {n}: Variação em u: {round(media_diferenca_u, 2)}   | Variação em v: {round(media_diferenca_v, 2)}\n')
+        print(f'--- iteração {n}: Variação em u: {round(media_diferenca_u, 2)}   | Variação em v: {round(media_diferenca_v, 2)}\n')
 
     print(msg_calc, '100 %')
 
